@@ -3,7 +3,7 @@ resource "aws_instance" "name" {
     instance_type = var.type
     subnet_id = aws_subnet.public.id
     vpc_security_group_ids = [ aws_security_group.name.id ]
-    user_data = ("prod.sh") ## calling test.sh from current directory by using file fucntion 
+    user_data = file("prod.sh") ## calling test.sh from current directory by using file fucntion 
       tags = {
         Name ="dev"  
       }
