@@ -6,3 +6,7 @@ env                = "dev"
 ami_id             = "ami-0c1fe732b5494dc14"
 region             = "us-east-1"
 #------- Rds---------
+db_name = "prashanth"
+db_user = "admin"
+db_instance_class = "db.t3.micro"
+db_password = "devprod123"

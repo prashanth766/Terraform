@@ -23,4 +23,15 @@ resource "aws_subnet" "public" {
   tags = {
     Name = "${var.env}-public-subnet"
   }
+  
+}
+resource "aws_subnet" "public2" {
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = var.public_subnet_cidr
+  availability_zone       = var.availability_zone
+  map_public_ip_on_launch = true
+  tags = {
+    Name = "${var.env}-public2-subnet"
+  }
+  
 }

@@ -22,3 +22,15 @@ module "ec2" {
  
   
 }
+module "rds" {
+  source = "../../modules/rds"
+  db_name=var.db_name
+  db_instance_class=var.db_instance_class
+  db_user = var.db_user
+  db_password = var.db_password
+  env = var.env
+  subnet_ids = module.vpc.public_subnet_id
+  
+
+  
+}
