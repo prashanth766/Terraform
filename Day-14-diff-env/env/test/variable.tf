@@ -1,0 +1,14 @@
+variable "region" {}
+variable "vpc_cidr" {}
+variable "subnet-1-cidr" {}
+variable "subnet-2-cidr" {}
+variable "az1" {}
+variable "az2" {}
+variable "ami_id" {}
+variable "instance_type" {}
+variable "env" {}
+variable "instance_class" {}
+variable "db_name" {}
+variable "db_user" {}
+variable "db_password" {}
+variable "bucket" {}
